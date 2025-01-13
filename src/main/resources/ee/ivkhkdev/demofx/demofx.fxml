@@ -1,12 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ee.ivkhkdev.demofx.DemoFxController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ee.ivkhkdev.demofx.controller.UserController">
    <children>
-      <Label fx:id="label" layoutX="225.0" layoutY="96.0" text="Hello" />
-      <Button fx:id="button" layoutX="213.0" layoutY="131.0" mnemonicParsing="false" onAction="#onActionButtonClick" text="Button" />
+      <HBox fx:id="vbox1" alignment="CENTER" prefHeight="91.0" prefWidth="594.0">
+         <children>
+            <Label fx:id="title" alignment="BOTTOM_CENTER" prefHeight="81.0" prefWidth="578.0" text="Регистрация пользователя">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox fx:id="vBoxInfo" alignment="CENTER" prefHeight="24.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="info" alignment="CENTER" prefHeight="27.0" prefWidth="568.0" textAlignment="CENTER">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox fx:id="vbox11" alignment="CENTER" prefHeight="42.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="firstname" alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="122.0" text="Имя" textAlignment="RIGHT">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fFirstname" prefHeight="27.0" prefWidth="313.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox fx:id="vbox12" alignment="CENTER" prefHeight="42.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="lastname" alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="122.0" text="Фамилия" textAlignment="RIGHT">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fLastname" prefHeight="27.0" prefWidth="313.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox fx:id="vbox13" alignment="CENTER" prefHeight="42.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="firstname3" alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="122.0" text="Логин" textAlignment="RIGHT">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fLogin" prefHeight="27.0" prefWidth="312.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox fx:id="vbox14" alignment="CENTER" prefHeight="42.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="firstname4" alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="122.0" text="Пароль" textAlignment="RIGHT">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fPassword" prefHeight="27.0" prefWidth="311.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox fx:id="vbox15" alignment="CENTER" prefHeight="65.0" prefWidth="600.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Button fx:id="btnRegister" mnemonicParsing="false" prefHeight="25.0" prefWidth="188.0" text="Зарегистрировать" onAction="#btnRegisterClick">
+               <font>
+                  <Font size="17.0" />
+               </font></Button>
+         </children>
+      </HBox>
    </children>
-</AnchorPane>
+</VBox>
